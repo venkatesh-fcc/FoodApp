@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'src/main/java/**'
+  workflow_dispatch: 
 
   pull_request:
     branches: [ "main" ]
