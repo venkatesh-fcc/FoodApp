@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'src/main/java/**'
+
   pull_request:
     branches: [ "main" ]
 
@@ -50,8 +51,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/spring-boot-app:latest
-            ${{ secrets.DOCKER_PASSWORD }}/spring-boot-app:${{ github.sha }}
+            spring-boot-app:welcome
+            spring-boot-app:${{ github.sha }}
       - name: Final Confirmation
         run: echo "file pushed to docker successfully!!"
 
