@@ -3,7 +3,6 @@ on:
   push:
     paths:
       - 'src/main/java/**'
-  workflow_dispatch:
 
   pull_request:
     branches: [ "main" ]
@@ -51,7 +50,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/FoodApp:welcome
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/FoodApp:welcome
+
       - name: Final Confirmation
         run: echo "file pushed to docker successfully!!"
 
