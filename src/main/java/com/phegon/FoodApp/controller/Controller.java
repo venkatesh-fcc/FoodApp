@@ -14,4 +14,8 @@ public class Controller {
     public String hi() {
         return "Hi World";
     }
+    @GetMapping("/welcome")
+    public String welcome() {
+        return "Welcome";
+    }
 }
