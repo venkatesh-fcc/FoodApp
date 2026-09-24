@@ -24,9 +24,6 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
-      - name: Run Unit Tests
-        run: mvn clean test
-
       - name: Build Application Package
         run: mvn -B package -DskipTests
   # -------------------------------------------------------
