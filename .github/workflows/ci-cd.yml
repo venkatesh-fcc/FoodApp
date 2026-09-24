@@ -51,7 +51,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/foodApp:welcome
+            ${{ secrets.DOCKER_USERNAME }}/foodapp:welcome
 
       - name: Final Confirmation
         run: echo "file pushed to docker successfully!!"
